@@ -24,15 +24,15 @@ const Task = ({t}) => {
     return (
         <tr>
         
-        <td><div class="form-control">
-  <label class="cursor-pointer label">
+        <td><div className="form-control">
+  <label className="cursor-pointer label">
   {
-            isChecked ? <input type="checkbox" checked="checked" class="checkbox checkbox-accent" /> :
+            isChecked ? <input type="checkbox" checked="checked" className="checkbox checkbox-accent" /> :
         
     <input type="checkbox"
     checked={isChecked}
     onChange={handleOnChange}
-      onClick={()=>completedTask(t.task)} class="checkbox checkbox-accent" />
+      onClick={()=>completedTask(t.task)} className="checkbox checkbox-accent" />
   }
   </label> 
 </div></td>

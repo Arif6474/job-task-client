@@ -30,7 +30,7 @@ const ToDo = () => {
                         <div className="form-control w-full max-w-xs">
                             <input type="text"  name="task"
             value={task}
-            onChange={event => setTask(event.target.value)} placeholder="Daily Task" class="input input-bordered input-primary w-full max-w-xs" />
+            onChange={event => setTask(event.target.value)} placeholder="Daily Task" className="input input-bordered input-primary w-full max-w-xs" />
                         </div>
                         <input className='my-4 w-full max-w-xs btn btn-accent border-0 text-white' type="submit" value="submit" />
                     </form>
