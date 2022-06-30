@@ -7,7 +7,15 @@ const ToDo = () => {
     const handleSubmit = event => {
       event.preventDefault();
       const task = event.target.task.value
-  
+      const dailyTask = {task}
+      const url = `http://localhost:5000/task`
+      fetch(url,{
+          method: 'POST',
+          headers: {'content-type' : 'application/json'},
+          body: JSON.stringify(dailyTask)
+      })
+      .then(res => res.json())
+      .then(result=> console.log(result))
       console.log(task);
       setTask('')
     };
