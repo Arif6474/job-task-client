@@ -12,8 +12,8 @@ const Home = () => {
         
     },[])
     return (
-        <div>
-        <h2 className="text-center text-xl font-bold text-emerald-600 mt-4">Daily Tasks</h2>
+        <div  className="container mx-auto">
+        <h2 className="text-center text-xl font-bold text-emerald-600 my-4">Daily Tasks</h2>
         <div className="overflow-x-auto">
 <table className="table w-full">
 <thead>

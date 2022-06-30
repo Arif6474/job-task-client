@@ -6,9 +6,9 @@ const Task = ({t}) => {
     const handleOnChange = () => {
         setIsChecked(!isChecked);
       };
-    const completedTask = (data) =>{
+    const completedTask = (complete) =>{
         
-        const completeTask = {data}
+        const completeTask = {complete}
         console.log(completeTask);
 
         const url = `http://localhost:5000/tasks`
