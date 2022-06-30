@@ -11,7 +11,7 @@ const Task = ({t}) => {
         const completeTask = {complete}
         console.log(completeTask);
 
-        const url = `http://localhost:5000/tasks`
+        const url = `https://sleepy-scrubland-60658.herokuapp.com/tasks`
         fetch(url,{
             method: 'POST',
             headers: {'content-type' : 'application/json'},

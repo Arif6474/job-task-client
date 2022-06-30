@@ -6,7 +6,7 @@ const Home = () => {
    
     useEffect(() => {
         
-            fetch(`http://localhost:5000/task`)
+            fetch(`https://sleepy-scrubland-60658.herokuapp.com/task`)
             .then(res => res.json())
             .then(data => setTasks(data))
         

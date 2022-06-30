@@ -8,7 +8,7 @@ const ToDo = () => {
       event.preventDefault();
       const task = event.target.task.value
       const dailyTask = {task}
-      const url = `http://localhost:5000/task`
+      const url = `https://sleepy-scrubland-60658.herokuapp.com/task`
       fetch(url,{
           method: 'POST',
           headers: {'content-type' : 'application/json'},

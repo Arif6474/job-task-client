@@ -6,7 +6,7 @@ const CompletedTask = () => {
    
     useEffect(() => {
         
-            fetch(`http://localhost:5000/tasks`)
+            fetch(`https://sleepy-scrubland-60658.herokuapp.com/tasks`)
             .then(res => res.json())
             .then(data => setCompletedTasks(data))
         
@@ -27,13 +27,13 @@ const CompletedTask = () => {
 </thead>
 <tbody>
   {
-     completedTasks.map((task ) => <tr   key={task._id}>
+     completedTasks.map((task , index) => <tr   key={task._id}>
         
         
-     <td></td>
+     <td>{index + 1}</td>
      <td >{task.complete}</td>
     
-     <td> <button  className="btn btn-outline btn-success btn-xs">Done</button></td>
+     <td> <button  className="btn btn-outline btn-primary btn-xs">Done</button></td>
     
    </tr>)
   }
