@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Task = ({t}) => {
-    const {task} = t;
+    const {task , _id} = t;
     const [isChecked, setIsChecked] = useState(false);
+    const navigate = useNavigate();
+    const  navigateToEditTask = id => {
+      navigate(`/task/${id}`)
+  }
     const handleOnChange = () => {
         setIsChecked(!isChecked);
       };
@@ -38,7 +43,7 @@ const Task = ({t}) => {
 </div></td>
         <td>{task}</td>
        
-        <td> <button  className="btn btn-outline btn-success btn-xs">Edit</button></td>
+        <td>  <button onClick= {() => navigateToEditTask(_id)}  className="btn btn-outline btn-success btn-xs">Edit</button></td>
        
       </tr>
       
